@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+  form(action=`/movies/${movie.id}/edit`,method="post")
+    input(type="text", value=movie.title, name="title", placeholder="Title", required, minlength="3")
+    input(type="text", value=movie.summary, name="summary", placeholder="summary", required)
+    input(type="text", name="genres", placeholder="Genres", required, value=movie.genres.join(",") )
+    input(type="submit", value="Submit")
+  a(href=`/movies/${movie.id}/delete`) Delete Movie
+      

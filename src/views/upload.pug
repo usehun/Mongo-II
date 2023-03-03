@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    form(method="POST", action="/upload")
+        input(placeholder="title", required, type="text", name="title")
+        input(placeholder="summary", required, type="text", name="summary")
+        input(placeholder="genres", required, type="text", name="genres")
+        input(type="submit", value="Upload Video")
+        
+//-   form(method="post")
+//-     input(type="text", name="title", placeholder="Title", required, minlength="3")
+//-     input(type="number", name="year", placeholder="Year", required, )
+//-     input(type="float", name="rating", placeholder="Rating", required, )
+//-     textarea(name="summary", placeholder="Synopsis", required, )
+//-     input(type="text", name="genres", placeholder="Genres", required, )
+//-     input(type="submit", value="Submit")

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div
+      p=movie.summary
+
+  ul
+    each genre in movie.genres
+      li=genre
+    a(href=`${movie.id}/edit`) Edit
